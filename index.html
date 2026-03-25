@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReviewDee Style - เว็บไซต์รีวิวฟรี</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        .review-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-blue-600">Review<span class="text-yellow-500">Dee</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">หน้าแรก</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Gadgets</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">อาหาร</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">ท่องเที่ยว</a>
+                        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">ติดต่อรีวิว</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-blue-600 py-16 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">รีวิวดีๆ มีให้ดูทุกวัน</h1>
+            <p class="text-xl opacity-90 mb-8">เราคัดสรรสินค้าคุณภาพมารีวิวให้คุณแบบเจาะลึก มั่นใจได้ก่อนเลือกซื้อ</p>
+            <div class="flex justify-center gap-4">
+                <a href="#reviews" class="bg-white text-blue-600 px-6 py-3 rounded-full font-bold shadow-lg hover:bg-gray-100">ดูรีวิล่าสุด</a>
+                <a href="#" class="border-2 border-white text-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-blue-600 transition">ติดตามเราบน Facebook</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <h2 class="text-2xl font-bold mb-8 flex items-center">
+            <i class="fas fa-th-large mr-3 text-blue-600"></i> หมวดหมู่ยอดนิยม
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-6 rounded-xl shadow-sm text-center border hover:border-blue-300 cursor-pointer">
+                <i class="fas fa-mobile-alt text-3xl text-blue-500 mb-3"></i>
+                <p class="font-semibold">มือถือ & Gadget</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm text-center border hover:border-blue-300 cursor-pointer">
+                <i class="fas fa-utensils text-3xl text-orange-500 mb-3"></i>
+                <p class="font-semibold">อาหาร & คาเฟ่</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm text-center border hover:border-blue-300 cursor-pointer">
+                <i class="fas fa-home text-3xl text-green-500 mb-3"></i>
+                <p class="font-semibold">ของใช้ในบ้าน</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm text-center border hover:border-blue-300 cursor-pointer">
+                <i class="fas fa-heart text-3xl text-red-500 mb-3"></i>
+                <p class="font-semibold">ความงาม</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Section -->
+    <main id="reviews" class="max-w-7xl mx-auto px-4 py-12">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-2xl font-bold flex items-center">
+                <i class="fas fa-star mr-3 text-yellow-500"></i> รีวิล่าสุด
+            </h2>
+            <select class="bg-white border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option>ล่าสุด</option>
+                <option>คะแนนสูงสุด</option>
+                <option>ราคาถูกที่สุด</option>
+            </select>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Review Card 1 -->
+            <div class="review-card bg-white rounded-2xl overflow-hidden shadow-md border">
+                <div class="relative h-56 bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="หูฟัง" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Gadget</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-gray-400 text-sm ml-2">(4.5/5)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">รีวิวหูฟังไร้สายรุ่นเทพ เบสหนัก เสียงใส</h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">หลังจากลองใช้มา 1 สัปดาห์ บอกเลยว่าคุ้มราคามาก ทั้งเรื่องดีไซน์และการตัดเสียงรบกวน...</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">2 ชั่วโมงที่แล้ว</span>
+                        <button class="text-blue-600 font-bold hover:underline" onclick="showModal('รีวิวหูฟังไร้สาย', 'เนื้อหาการรีวิวแบบละเอียดของหูฟังรุ่นนี้จะอยู่ตรงนี้...')">อ่านต่อ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Card 2 -->
+            <div class="review-card bg-white rounded-2xl overflow-hidden shadow-md border">
+                <div class="relative h-56 bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="ร้านขนม" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm">อาหาร</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="text-gray-400 text-sm ml-2">(5.0/5)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">พิกัดลับ! คาเฟ่ขนมปังอบสดใหม่ ย่านอารีย์</h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">สายคาเฟ่ต้องไม่พลาด กลิ่นหอมฟุ้งไปทั้งซอย บรรยากาศดี ถ่ายรูปสวยทุกมุม...</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">5 ชั่วโมงที่แล้ว</span>
+                        <button class="text-blue-600 font-bold hover:underline">อ่านต่อ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div class="review-card bg-white rounded-2xl overflow-hidden shadow-md border">
+                <div class="relative h-56 bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="ของใช้บ้าน" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">บ้าน</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star text-gray-300"></i>
+                        <span class="text-gray-400 text-sm ml-2">(4.0/5)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">เครื่องฟอกอากาศตัวจิ๋ว ประสิทธิภาพแจ๋ว</h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">เหมาะมากสำหรับวางบนโต๊ะทำงาน ช่วยกรองฝุ่น PM 2.5 ได้ดีกว่าที่คิดในราคาหลักร้อย...</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">เมื่อวานนี้</span>
+                        <button class="text-blue-600 font-bold hover:underline">อ่านต่อ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <button class="bg-gray-200 text-gray-800 px-8 py-3 rounded-full font-bold hover:bg-gray-300 transition">โหลดรีวิวเพิ่มเติม</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <span class="text-2xl font-bold text-blue-600">Review<span class="text-yellow-500">Dee</span></span>
+                <p class="mt-4 text-gray-500">แหล่งรวมรีวิวสินค้าและบริการที่เชื่อถือได้ พร้อมนำเสนอข้อมูลที่ครบถ้วนเพื่อการตัดสินใจที่ดีที่สุด</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">ลิงก์ที่สำคัญ</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="hover:text-blue-600">เกี่ยวกับเรา</a></li>
+                    <li><a href="#" class="hover:text-blue-600">นโยบายความเป็นส่วนตัว</a></li>
+                    <li><a href="#" class="hover:text-blue-600">ร่วมงานกับเรา</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">ติดตามเรา</h4>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-pink-600 hover:bg-pink-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 text-center text-gray-400 text-sm">
+            © 2026 ReviewDee Team. ทำได้เอง ฟรี และง่าย!
+        </div>
+    </footer>
+
+    <!-- Simple Modal for Demo -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[100] p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full p-8 relative">
+            <button onclick="hideModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl">×</button>
+            <h2 id="modalTitle" class="text-3xl font-bold mb-4">หัวข้อรีวิว</h2>
+            <div id="modalContent" class="text-gray-600 leading-relaxed mb-6">
+                เนื้อหารีวิว...
+            </div>
+            <button onclick="hideModal()" class="bg-blue-600 text-white px-6 py-2 rounded-lg">ปิดหน้าต่าง</button>
+        </div>
+    </div>
+
+    <script>
+        function showModal(title, content) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalContent').innerText = content;
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modal').classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideModal() {
+            document.getElementById('modal').classList.add('hidden');
+            document.getElementById('modal').classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
